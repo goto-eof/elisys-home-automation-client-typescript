@@ -6,7 +6,7 @@ export default function Home() {
       <Text>Elisys Home Automation Client</Text>
       <Text>
         Elisys Home Automation Client is the front-end side of the Elisys
-        software suite. Currently it allows to analyze information about Weather
+        software suite. Currently it allows to control relays remotely and analyze information about Weather
         sensors. In particular, through Elisys Home Automation Client it is
         possible to visualize the minimum temperature/humidity/lux value,
         maximum temperature/humidity/lux value, average temperature/humidity/lux
