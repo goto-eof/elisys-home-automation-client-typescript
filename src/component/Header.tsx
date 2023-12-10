@@ -71,8 +71,6 @@ function WeatherStationMenuItems() {
   return (
     <Menu>
       <MenuButton
-       // borderBottomColor={'green.400'}
-       // borderBottomWidth={'3px'}
         p={2}
       >
         <HStack>
@@ -110,8 +108,6 @@ function RelaysMenuItems() {
   return (
     <Menu>
       <MenuButton
-        //borderBottomColor={'green.400'}
-        //borderBottomWidth={'3px'}
         p={2}
       >
         <HStack>
