@@ -18,6 +18,7 @@ import WeatherDTO from '../../dto/WeatherDTO';
 import { useParams } from 'react-router-dom';
 import DeviceType from '../../dto/DeviceType';
 import DeviceService from '../../service/DeviceService';
+import SensorSummary from "./SensorSummary";
 
 export default function Last24hWeatherSummary() {
   let { macAddress } = useParams();
@@ -74,7 +75,7 @@ export default function Last24hWeatherSummary() {
             </HStack>
           </Heading>
           <Box boxShadow={'base'} p={3} mb={3}>
-            <QuadStat
+            <SensorSummary
               key={'temperature'}
               title="Temperature"
               average={weatherSummary.avgTemperature}
@@ -92,7 +93,7 @@ export default function Last24hWeatherSummary() {
             )}
           </Box>
           <Box boxShadow={'base'} p={3} mb={3}>
-            <QuadStat
+            <SensorSummary
               title="Humidity"
               key={'humidity'}
               average={weatherSummary.avgHumidity}
@@ -108,7 +109,7 @@ export default function Last24hWeatherSummary() {
             />
           </Box>
           <Box boxShadow={'base'} p={3} mb={3}>
-            <QuadStat
+            <SensorSummary
               title="Light (Lux)"
               key={'light'}
               average={weatherSummary.avgLux}
@@ -126,40 +127,5 @@ export default function Last24hWeatherSummary() {
         </Box>
       )}
     </Box>
-  );
-}
-
-function QuadStat({
-  minimum,
-  maximum,
-  average,
-  last,
-  title,
-}: {
-  minimum: number;
-  maximum: number;
-  average: number;
-  last: number;
-  title: string;
-}) {
-  return (
-    <StatGroup>
-      <Stat>
-        <StatLabel>Minimum {title}</StatLabel>
-        <StatNumber>{minimum}</StatNumber>
-      </Stat>
-      <Stat>
-        <StatLabel minH={'0em'}>Last {title}</StatLabel>
-        <StatNumber>{last}</StatNumber>
-      </Stat>
-      <Stat>
-        <StatLabel>Maximum {title}</StatLabel>
-        <StatNumber>{maximum}</StatNumber>
-      </Stat>
-      <Stat>
-        <StatLabel>Average {title}</StatLabel>
-        <StatNumber>{average}</StatNumber>
-      </Stat>
-    </StatGroup>
   );
 }
