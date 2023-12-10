@@ -1,4 +1,4 @@
-import { Box, VStack } from '@chakra-ui/react';
+import {Box, SimpleGrid, VStack} from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import RelayService from '../service/RelayService';
@@ -63,12 +63,12 @@ export default function RelayPanel() {
   };
 
   return (
-    <Box>
-      <VStack onClick={switchRelay}>
+    <SimpleGrid columns={{base: 1}}>
+      <VStack onClick={switchRelay} boxShadow={'base'} backgroundColor={'blackAlpha.200'} borderRadius={'md'} p={4}>
         <Box>
           <FaLightbulb
             color={configuration?.powerOn ? 'red' : 'green'}
-            fontSize={'5em'}
+            fontSize={'10em'}
           />
         </Box>
         <Box fontSize={'0.5em'}>
@@ -78,6 +78,6 @@ export default function RelayPanel() {
         {device && <Box>{device.name}</Box>}
         {device && <Box>{device.description}</Box>}
       </VStack>
-    </Box>
+    </SimpleGrid>
   );
 }
