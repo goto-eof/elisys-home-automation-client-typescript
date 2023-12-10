@@ -10,14 +10,13 @@ import {
   Wrap,
   WrapItem,
 } from '@chakra-ui/react';
-import {FaCalculator, FaCloudSunRain, FaHome, FaLightbulb, FaNetworkWired} from 'react-icons/fa';
+import { FaCloudSunRain, FaHome, FaLightbulb} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 import { useEffect, useState } from 'react';
 import WeatherStationService from '../service/WeatherStationService';
 import DeviceDTO from '../dto/DeviceDTO';
 import RelayService from '../service/RelayService';
-import {VscSymbolInterface} from "react-icons/all";
 
 export default function Header() {
   return (
