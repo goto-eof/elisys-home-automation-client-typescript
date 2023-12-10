@@ -5,9 +5,11 @@
 /.pnp
 .pnp.js
 .env
+/.idea
 # testing
 /coverage
 .idea
+yarn-error.log
 # production
 /build
 

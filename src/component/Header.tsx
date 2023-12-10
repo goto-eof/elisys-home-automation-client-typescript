@@ -10,13 +10,14 @@ import {
   Wrap,
   WrapItem,
 } from '@chakra-ui/react';
-import { FaCloudSunRain, FaHome } from 'react-icons/fa';
+import {FaCalculator, FaCloudSunRain, FaHome, FaLightbulb, FaNetworkWired} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 import { useEffect, useState } from 'react';
 import WeatherStationService from '../service/WeatherStationService';
 import DeviceDTO from '../dto/DeviceDTO';
 import RelayService from '../service/RelayService';
+import {VscSymbolInterface} from "react-icons/all";
 
 export default function Header() {
   return (
@@ -70,8 +71,6 @@ function WeatherStationMenuItems() {
   return (
     <Menu>
       <MenuButton
-        borderBottomColor={'green.400'}
-        borderBottomWidth={'3px'}
         p={2}
       >
         <HStack>
@@ -109,12 +108,10 @@ function RelaysMenuItems() {
   return (
     <Menu>
       <MenuButton
-        borderBottomColor={'green.400'}
-        borderBottomWidth={'3px'}
         p={2}
       >
         <HStack>
-          <FaCloudSunRain />
+          <FaLightbulb />
           <Text>Relays</Text>
         </HStack>
       </MenuButton>
@@ -135,7 +132,7 @@ function RelaysMenuItems() {
               to={`/relay/${device.macAddress}`}
             >
               <MenuItem>
-                <FaCloudSunRain />
+                <FaLightbulb />
                 <Text ml={3}>{device.name}</Text>
               </MenuItem>
             </Link>

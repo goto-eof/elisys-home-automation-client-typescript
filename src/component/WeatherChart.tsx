@@ -62,7 +62,7 @@ export default function WeatherChart({
             case 'pressure':
               return w.pressure;
             case 'light':
-              return w.light;
+              return w.lux;
             default:
               return w.temperature;
           }

@@ -1,4 +1,4 @@
-import {Box, VStack} from '@chakra-ui/react';
+import {Box} from '@chakra-ui/react';
 import {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import RelayService from '../service/RelayService';
