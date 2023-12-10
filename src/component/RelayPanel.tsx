@@ -67,9 +67,12 @@ export default function RelayPanel() {
       <VStack onClick={switchRelay}>
         <Box>
           <FaLightbulb
-            color={configuration?.powerOn ? 'yellow' : 'green'}
+            color={configuration?.powerOn ? 'red' : 'green'}
             fontSize={'5em'}
           />
+        </Box>
+        <Box fontSize={'0.5em'}>
+          Status: {configuration?.powerOn ? 'ON' : 'OFF'}
         </Box>
         {/* <Box fontSize={'0.5em'}>({macAddress})</Box> */}
         {device && <Box>{device.name}</Box>}
