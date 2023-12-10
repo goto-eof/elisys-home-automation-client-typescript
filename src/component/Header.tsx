@@ -16,6 +16,7 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
 import { useEffect, useState } from 'react';
 import WeatherStationService from '../service/WeatherStationService';
 import DeviceDTO from '../dto/DeviceDTO';
+import RelayService from '../service/RelayService';
 
 export default function Header() {
   return (
@@ -41,7 +42,10 @@ export default function Header() {
             </WrapItem>
 
             <WrapItem>
-              <WeatherStationButtons />
+              <WeatherStationMenuItems />
+            </WrapItem>
+            <WrapItem>
+              <RelaysMenuItems />
             </WrapItem>
           </Wrap>
         </HStack>
@@ -54,7 +58,7 @@ export default function Header() {
   );
 }
 
-function WeatherStationButtons() {
+function WeatherStationMenuItems() {
   let [stations, setStations] = useState<Array<DeviceDTO>>([]);
   useEffect(() => {
     retrieveWeatherStations();
@@ -81,6 +85,45 @@ function WeatherStationButtons() {
             <Link
               key={'weather-station-menu-item-' + device.macAddress}
               to={`/weather-station/${device.macAddress}`}
+            >
+              <MenuItem>
+                <FaCloudSunRain />
+                <Text ml={3}>{device.name}</Text>
+              </MenuItem>
+            </Link>
+          ))}
+      </MenuList>
+    </Menu>
+  );
+}
+
+function RelaysMenuItems() {
+  let [relayList, setRelayList] = useState<Array<DeviceDTO>>([]);
+  useEffect(() => {
+    retrieveRelays();
+  }, []);
+  const retrieveRelays = async () => {
+    let relays = await RelayService.retrieveRelays();
+    setRelayList(relays);
+  };
+  return (
+    <Menu>
+      <MenuButton
+        borderBottomColor={'green.400'}
+        borderBottomWidth={'3px'}
+        p={2}
+      >
+        <HStack>
+          <FaCloudSunRain />
+          <Text>Relays</Text>
+        </HStack>
+      </MenuButton>
+      <MenuList>
+        {relayList &&
+          relayList.map((device: DeviceDTO) => (
+            <Link
+              key={'relay-menu-item-' + device.macAddress}
+              to={`/relay/${device.macAddress}`}
             >
               <MenuItem>
                 <FaCloudSunRain />

@@ -3,6 +3,7 @@ import WeatherStationDevices from './WeatherStationDevices';
 import Last24hWeatherSummary from './Last24hWeatherSummary';
 import { VStack } from '@chakra-ui/react';
 import Home from './Home';
+import RelayPanel from './RelayPanel';
 
 export default function Content() {
   return (
@@ -14,6 +15,7 @@ export default function Content() {
           path="/weather-station/:macAddress"
           element={<Last24hWeatherSummary />}
         />
+        <Route path="/relay/:macAddress" element={<RelayPanel />} />
       </Routes>
     </VStack>
   );

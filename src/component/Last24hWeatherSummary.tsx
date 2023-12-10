@@ -17,6 +17,7 @@ import WeatherChart from './WeatherChart';
 import WeatherDTO from '../dto/WeatherDTO';
 import { useParams } from 'react-router-dom';
 import DeviceType from '../dto/DeviceType';
+import DeviceService from '../service/DeviceService';
 
 export default function Last24hWeatherSummary() {
   let { macAddress } = useParams();
@@ -30,7 +31,7 @@ export default function Last24hWeatherSummary() {
   const [chart, setChart] = useState<Array<WeatherDTO>>();
 
   const retrieveSummary = async () => {
-    let station = await WeatherStationService.retrieveWeatherStation({
+    let station = await DeviceService.retrieveDevice({
       macAddress: macAddress!,
       type: DeviceType.WeatherStation,
     });
