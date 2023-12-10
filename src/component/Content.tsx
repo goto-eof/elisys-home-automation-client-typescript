@@ -4,6 +4,7 @@ import Last24hWeatherSummary from './Last24hWeatherSummary';
 import { VStack } from '@chakra-ui/react';
 import Home from './Home';
 import RelayPanel from './RelayPanel';
+import RelaysPanel from "./RelaysPanel";
 
 export default function Content() {
   return (
@@ -15,7 +16,8 @@ export default function Content() {
           path="/weather-station/:macAddress"
           element={<Last24hWeatherSummary />}
         />
-        <Route path="/relay/:macAddress" element={<RelayPanel />} />
+          <Route path="/relay/:macAddress" element={<RelayPanel />} />
+          <Route path="/relay/all" element={<RelaysPanel />} />
       </Routes>
     </VStack>
   );

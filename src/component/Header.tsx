@@ -119,6 +119,15 @@ function RelaysMenuItems() {
         </HStack>
       </MenuButton>
       <MenuList>
+        <Link
+            key={'relay-menu-item-all' }
+            to={`/relay/all`}
+        >
+          <MenuItem>
+            <FaCloudSunRain />
+            <Text ml={3}>All relays</Text>
+          </MenuItem>
+        </Link>
         {relayList &&
           relayList.map((device: DeviceDTO) => (
             <Link
