@@ -9,15 +9,15 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-import WeatherStationService from '../service/WeatherStationService';
-import WeatherRequestDTO from '../dto/WeatherRequestDTO';
-import WeatherSummaryDTO from '../dto/WeatherSummaryDTO';
+import WeatherStationService from '../../service/WeatherStationService';
+import WeatherRequestDTO from '../../dto/WeatherRequestDTO';
+import WeatherSummaryDTO from '../../dto/WeatherSummaryDTO';
 import { FaHome } from 'react-icons/fa';
 import WeatherChart from './WeatherChart';
-import WeatherDTO from '../dto/WeatherDTO';
+import WeatherDTO from '../../dto/WeatherDTO';
 import { useParams } from 'react-router-dom';
-import DeviceType from '../dto/DeviceType';
-import DeviceService from '../service/DeviceService';
+import DeviceType from '../../dto/DeviceType';
+import DeviceService from '../../service/DeviceService';
 
 export default function Last24hWeatherSummary() {
   let { macAddress } = useParams();

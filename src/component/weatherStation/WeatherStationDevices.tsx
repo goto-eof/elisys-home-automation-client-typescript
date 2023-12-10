@@ -7,9 +7,9 @@ import {
   Heading,
   Center,
 } from '@chakra-ui/react';
-import WeatherStationService from '../service/WeatherStationService';
+import WeatherStationService from '../../service/WeatherStationService';
 import { useEffect, useState } from 'react';
-import DeviceDTO from '../dto/DeviceDTO';
+import DeviceDTO from '../../dto/DeviceDTO';
 import { Link } from 'react-router-dom';
 import { FaCloudSunRain } from 'react-icons/fa';
 

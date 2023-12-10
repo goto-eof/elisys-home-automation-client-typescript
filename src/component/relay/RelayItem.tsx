@@ -1,7 +1,7 @@
 import {Box, VStack} from "@chakra-ui/react";
 import {FaLightbulb} from "react-icons/fa";
-import RelayConfigurationResponseDTO from "../dto/RelayConfigurationResponseDTO";
-import DeviceDTO from "../dto/DeviceDTO";
+import RelayConfigurationResponseDTO from "../../dto/RelayConfigurationResponseDTO";
+import DeviceDTO from "../../dto/DeviceDTO";
 
 export default function RelayItem({switchRelay, configuration, device}: {
     switchRelay: (configuration: RelayConfigurationResponseDTO) => void,

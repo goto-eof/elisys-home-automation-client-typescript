@@ -20,7 +20,7 @@ import {
   PointElement,
   LineElement,
 } from 'chart.js';
-import WeatherDTO from '../dto/WeatherDTO';
+import WeatherDTO from '../../dto/WeatherDTO';
 import moment from 'moment';
 ChartJS.register(
   CategoryScale,

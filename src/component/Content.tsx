@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import WeatherStationDevices from './WeatherStationDevices';
-import Last24hWeatherSummary from './Last24hWeatherSummary';
+import WeatherStationDevices from './weatherStation/WeatherStationDevices';
+import Last24hWeatherSummary from './weatherStation/Last24hWeatherSummary';
 import { VStack } from '@chakra-ui/react';
 import Home from './Home';
-import RelayPanel from './RelayPanel';
-import RelaysPanel from "./RelaysPanel";
+import RelayPanel from './relay/RelayPanel';
+import RelaysPanel from "./relay/RelaysPanel";
 
 export default function Content() {
   return (

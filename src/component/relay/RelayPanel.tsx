@@ -1,13 +1,13 @@
 import {Box} from '@chakra-ui/react';
 import {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import RelayService from '../service/RelayService';
-import RelayConfigurationRequestDTO from '../dto/RelayConfigurationRequest';
-import DeviceType from '../dto/DeviceType';
-import RelayConfigurationResponseDTO from '../dto/RelayConfigurationResponseDTO';
-import DeviceDTO from '../dto/DeviceDTO';
-import DeviceRequestDTO from '../dto/DeviceRequestDTO';
-import DeviceService from '../service/DeviceService';
+import RelayService from '../../service/RelayService';
+import RelayConfigurationRequestDTO from '../../dto/RelayConfigurationRequest';
+import DeviceType from '../../dto/DeviceType';
+import RelayConfigurationResponseDTO from '../../dto/RelayConfigurationResponseDTO';
+import DeviceDTO from '../../dto/DeviceDTO';
+import DeviceRequestDTO from '../../dto/DeviceRequestDTO';
+import DeviceService from '../../service/DeviceService';
 import RelayItem from "./RelayItem";
 
 export default function RelayPanel() {
