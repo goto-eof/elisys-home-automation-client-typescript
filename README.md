@@ -5,7 +5,9 @@ possible to visualize the minimum temperature/humidity/lux value, maximum temper
 the temperature, humidity and lux.
 
 **Elisys Home Automation Client (TypeScript)** is the front-end side
-of the following projects:
+of the following project:
+[Elisys Home Automation Server (Java)](https://github.com/goto-eof/elisys-home-automation-server-java)
+that gathers information from these applications:
 
 - [**Elisys ESP32 Motion Detector (Rust)**](https://github.com/goto-eof/esp32-motion-detector-and-server-notifier-rust)
 - [**Elisys ESP32 Weather Station (Rust)**](https://github.com/goto-eof/elisys-esp32-weather-station-client-rust)
