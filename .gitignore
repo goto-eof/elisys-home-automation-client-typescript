@@ -8,7 +8,7 @@
 /.idea
 # testing
 /coverage
-
+yarn-error.log
 # production
 /build
 
