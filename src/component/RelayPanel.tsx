@@ -19,7 +19,7 @@ export default function RelayPanel() {
   useEffect(() => {
     retrieveAndSetConfiguration();
     retrieveDeviceInformation();
-  }, []);
+  }, [macAddress]);
 
   const retrieveAndSetConfiguration =
     async (): Promise<RelayConfigurationResponseDTO> => {
