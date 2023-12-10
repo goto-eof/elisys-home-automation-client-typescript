@@ -33,7 +33,7 @@ Finally execute:
 yarn start
 ```
 
-If the device succeeded in registering to the server, then in the `Weather Stations` menu will appear an item called `Weather Station`.
+If the device succeeded in registering to the server, then in the `Weather Stations` menu will appear an item called `Weather Station` or in the `Relays` menu will appear your relay.
 
 # Screenshots
 
