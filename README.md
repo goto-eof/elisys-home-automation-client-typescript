@@ -13,6 +13,28 @@ of the following project:
 - [**Elisys ESP32 Relay Client (Rust)**](https://github.com/goto-eof/elisys-esp32-relay-client-rust)
 - [**Elisys ESP32 Alarm Clock (Rust)**](https://github.com/goto-eof/elisys-esp32-alarm-clock-rust)
 
+# How to run the project?
+
+First of all you need to execute:
+
+```
+yarn install
+```
+
+then create a `.env` file which should contain the url where is installed Elisys Home Automation Server, like:
+
+```
+REACT_APP_HOST=http://192.168.1.102:8080/
+```
+
+Finally execute:
+
+```
+yarn start
+```
+
+If the device succeeded in registering to the server, then in the `Weather Stations` menu will appear an item called `Weather Station`.
+
 # Screenshots
 
 | Picture                                |
