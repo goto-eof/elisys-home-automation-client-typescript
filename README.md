@@ -42,3 +42,5 @@ If the device succeeded in registering to the server, then in the `Weather Stati
 | ![temperature](images/temperature.png) |
 | ![temperature](images/humidity.png)    |
 | ![temperature](images/lux.png)         |
+
+If you found a bug please contact me [here](https://andre-i.eu/#contactme).
