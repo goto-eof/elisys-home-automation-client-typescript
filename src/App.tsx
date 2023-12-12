@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ChakraProvider, Box, theme } from '@chakra-ui/react';
 import { HashRouter} from 'react-router-dom';
-import Header from './component/Header';
+import Header from './component/header/Header';
 import Content from './component/Content';
 
 export const App = () => (

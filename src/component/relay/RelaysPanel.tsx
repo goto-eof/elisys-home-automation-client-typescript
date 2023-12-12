@@ -1,14 +1,9 @@
-import {Box, SimpleGrid, VStack} from '@chakra-ui/react';
+import { SimpleGrid} from '@chakra-ui/react';
 import {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
 import RelayService from '../../service/RelayService';
-import RelayConfigurationRequestDTO from '../../dto/RelayConfigurationRequest';
 import DeviceType from '../../dto/DeviceType';
 import RelayConfigurationResponseDTO from '../../dto/RelayConfigurationResponseDTO';
-import {FaLightbulb} from 'react-icons/fa';
 import DeviceDTO from '../../dto/DeviceDTO';
-import DeviceRequestDTO from '../../dto/DeviceRequestDTO';
-import DeviceService from '../../service/DeviceService';
 import RelayItem from "./RelayItem";
 
 export default function RelaysPanel() {
@@ -51,17 +46,13 @@ export default function RelaysPanel() {
     };
 
     const updateConfigurations = (freshConfiguration: RelayConfigurationResponseDTO, oldConfiguration: RelayConfigurationResponseDTO) => {
-        let arr = configurations?.map(config => {
+        let arr = configurations?.map((config:RelayConfigurationResponseDTO) => {
             if (config._device!.macAddress === oldConfiguration._device!.macAddress) {
                 freshConfiguration._device = oldConfiguration._device!;
-                console.log('yahoooo: ' + freshConfiguration.powerOn);
                 return freshConfiguration;
             }
-            console.log("yabadabadoo: " + config.powerOn);
             return config;
         });
-        console.log('ok');
-        console.log(arr);
         setConfigurations(arr);
     };
 
