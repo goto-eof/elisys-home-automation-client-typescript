@@ -1,4 +1,4 @@
-import { SimpleGrid} from '@chakra-ui/react';
+import {SimpleGrid} from '@chakra-ui/react';
 import {useEffect, useState} from 'react';
 import RelayService from '../../service/RelayService';
 import DeviceType from '../../dto/DeviceType';
@@ -46,7 +46,7 @@ export default function RelaysPanel() {
     };
 
     const updateConfigurations = (freshConfiguration: RelayConfigurationResponseDTO, oldConfiguration: RelayConfigurationResponseDTO) => {
-        let arr = configurations?.map((config:RelayConfigurationResponseDTO) => {
+        let arr = configurations?.map((config: RelayConfigurationResponseDTO) => {
             if (config._device!.macAddress === oldConfiguration._device!.macAddress) {
                 freshConfiguration._device = oldConfiguration._device!;
                 return freshConfiguration;
@@ -83,7 +83,8 @@ export default function RelaysPanel() {
     return (
         <SimpleGrid columns={{base: 1, md: 2, lg: 5, xl: 6}} spacing={10}>
             {configurations && configurations.map(configuration =>
-                <RelayItem switchRelay={switchRelay} configuration={configuration} device={configuration._device!}/>
+                <RelayItem key={'relay-item-' + configuration._device?.macAddress!} switchRelay={switchRelay}
+                           configuration={configuration} device={configuration._device!}/>
             )}
         </SimpleGrid>
     );

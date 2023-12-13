@@ -30,7 +30,7 @@ export default function RelaysMenuItems() {
                     to={`/relay/all`}
                 >
                     <MenuItem>
-                        <FaCloudSunRain />
+                        <FaLightbulb />
                         <Text ml={3}>All relays</Text>
                     </MenuItem>
                 </Link>
