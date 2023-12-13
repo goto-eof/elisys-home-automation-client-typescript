@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import WeatherStationDevices from './weatherStation/WeatherStationDevices';
-import Last24hWeatherSummary from './weatherStation/Last24hWeatherSummary';
+import WeatherSummary from './weatherStation/WeatherSummary';
 import { VStack } from '@chakra-ui/react';
 import Home from './Home';
 import RelayPanel from './relay/RelayPanel';
@@ -14,7 +14,7 @@ export default function Content() {
         <Route path="/weather-station" element={<WeatherStationDevices />} />
         <Route
           path="/weather-station/:macAddress"
-          element={<Last24hWeatherSummary />}
+          element={<WeatherSummary />}
         />
           <Route path="/relay/:macAddress" element={<RelayPanel />} />
           <Route path="/relay/all" element={<RelaysPanel />} />

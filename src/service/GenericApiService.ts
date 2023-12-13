@@ -22,8 +22,7 @@ export default class GenericApiService {
                 withCredentials: true,
             })
             .then(async (result: any) => {
-                let data = result.data;
-                return data;
+                return result.data;
             })
             .catch((err: any) => {
                 throw err;
@@ -35,8 +34,7 @@ export default class GenericApiService {
             .create()
             .post<T>(`${this.baseUrl}${url}`, data, {withCredentials: true})
             .then(async (result: any) => {
-                let data = result.data;
-                return data;
+                return result.data;
             })
             .catch((err: any) => {
                 throw err;
@@ -51,8 +49,7 @@ export default class GenericApiService {
             .create()
             .post<T>(`${this.baseUrl}${url}`, data, {withCredentials: true})
             .then(async (result: any) => {
-                let data = result.data;
-                return data;
+                return result.data;
             })
             .catch((err: any) => {
                 throw err;
@@ -66,8 +63,7 @@ export default class GenericApiService {
                 withCredentials: true,
             })
             .then(async (result: any) => {
-                let data = result.data;
-                return data;
+                return result.data;
             })
             .catch((err: any) => {
                 throw err;
