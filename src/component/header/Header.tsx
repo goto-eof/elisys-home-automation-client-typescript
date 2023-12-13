@@ -11,6 +11,7 @@ import {Link} from 'react-router-dom';
 import {ColorModeSwitcher} from '../../ColorModeSwitcher';
 import WeatherStationMenuItems from "./WeatherStationMenuItems";
 import RelaysMenuItems from "./RelaysMenuItems";
+import AlarmClockMenuItems from "./AlarmClockMenuItems";
 
 export default function Header() {
     return (
@@ -41,12 +42,18 @@ export default function Header() {
                         <WrapItem>
                             <RelaysMenuItems/>
                         </WrapItem>
+                        <Box>
+                            <AlarmClockMenuItems/>
+                        </Box>
                     </Wrap>
                 </HStack>
-                <HStack></HStack>
-                <Box>
-                    <ColorModeSwitcher/>
-                </Box>
+                <HStack>
+                    <Box>
+                        <ColorModeSwitcher/>
+                    </Box>
+                </HStack>
+
+
             </HStack>
         </VStack>
     );
