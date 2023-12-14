@@ -1,28 +1,16 @@
-import {
-    Box,
-    HStack,
-    Heading,
-    Text, IconButton, Flex,
-} from '@chakra-ui/react';
+import {Box, Flex, Heading, HStack, IconButton, Text,} from '@chakra-ui/react';
 import {useEffect, useState} from 'react';
 import WeatherStationService from '../../service/WeatherStationService';
 import WeatherRequestDTO from '../../dto/WeatherRequestDTO';
 import WeatherSummaryDTO from '../../dto/WeatherSummaryDTO';
-import {
-    FaCalendar,
-    FaCalendarDay,
-    FaCalendarWeek,
-    FaChartBar,
-    FaChartLine,
-    FaCloudSunRain,
-    FaHome
-} from 'react-icons/fa';
+import {FaCalendar, FaCalendarDay, FaCalendarWeek, FaChartBar, FaChartLine, FaCloudSunRain} from 'react-icons/fa';
 import WeatherChart, {ChartType} from './WeatherChart';
 import WeatherDTO from '../../dto/WeatherDTO';
 import {useParams} from 'react-router-dom';
 import DeviceType from '../../dto/DeviceType';
 import DeviceService from '../../service/DeviceService';
 import SensorSummary from "./SensorSummary";
+import DevicePanel from "../DevicePanel";
 
 
 type ModeType = '24h' | '7d' | '1m';
@@ -206,6 +194,7 @@ export default function WeatherSummary() {
                     </Box>
                 </Box>
             )}
+            <DevicePanel type={DeviceType.WeatherStation} macAddress={macAddress!}/>
         </Box>
     );
 }

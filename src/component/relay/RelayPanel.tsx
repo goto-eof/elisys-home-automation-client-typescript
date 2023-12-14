@@ -9,6 +9,7 @@ import DeviceDTO from '../../dto/DeviceDTO';
 import DeviceRequestDTO from '../../dto/DeviceRequestDTO';
 import DeviceService from '../../service/DeviceService';
 import RelayItem from "./RelayItem";
+import DevicePanel from "../DevicePanel";
 
 export default function RelayPanel() {
     let {macAddress} = useParams();
@@ -64,6 +65,7 @@ export default function RelayPanel() {
 
     return (
         <Box>
+            {macAddress && <DevicePanel type={DeviceType.Relay} macAddress={macAddress!}/>}
             {device && configuration &&
                 <RelayItem device={device!} switchRelay={switchRelay} configuration={configuration!}/>}
         </Box>

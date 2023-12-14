@@ -56,10 +56,10 @@ export default class GenericApiService {
             });
     }
 
-    public static async put<T>(url: string, id: number, data: T): Promise<T> {
+    public static async put<T>(url: string, data: T): Promise<T> {
         return await axios
             .create()
-            .put<T>(`${this.baseUrl}${url}/${id}`, data, {
+            .put<T>(`${this.baseUrl}${url}`, data, {
                 withCredentials: true,
             })
             .then(async (result: any) => {

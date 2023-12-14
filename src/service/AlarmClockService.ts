@@ -17,4 +17,9 @@ export default class AlarmClockService {
     }
 
 
+    public static async update(requestData: AlarmClockConfigurationResposeDTO) {
+        return GenericApiService.put<AlarmClockConfigurationResposeDTO>(`${this.baseHandlerUrl}/id/${requestData.id}`, requestData);
+    }
+
+
 }

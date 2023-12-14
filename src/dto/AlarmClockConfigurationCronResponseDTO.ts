@@ -1,5 +1,6 @@
 export default interface AlarmClockConfigurationCronResponseDTO {
-    id: number;
+    id?: number;
     cron: string;
     description: string;
+    _idx?: number
 }

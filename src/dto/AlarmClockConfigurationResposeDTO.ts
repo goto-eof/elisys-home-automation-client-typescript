@@ -1,7 +1,7 @@
 import AlarmClockConfigurationCronResponseDTO from "./AlarmClockConfigurationCronResponseDTO";
 
 export default interface AlarmClockConfigurationResposeDTO {
-    id: number;
+    id?: number;
     cronList: Array<AlarmClockConfigurationCronResponseDTO>;
     timezoneSeconds: number;
     alarmIntervalMinutes: number;
