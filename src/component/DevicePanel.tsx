@@ -1,4 +1,4 @@
-import {Box, Button, FormControl, FormLabel, Heading, HStack, Input, useToast} from "@chakra-ui/react";
+import {Box, Button, FormControl, FormLabel, Heading, HStack, Input, Text, useToast} from "@chakra-ui/react";
 import DeviceDTO from "../dto/DeviceDTO";
 import {useEffect, useState} from "react";
 import DeviceService from "../service/DeviceService";
@@ -61,6 +61,7 @@ export default function DevicePanel({macAddress, type}: { type: DeviceType, macA
     return (
         <Box p={3}>
             <Heading>Device</Heading>
+            <Text fontSize={'0.6em'}>last Ack: {device?.lastAck ? device?.lastAck.toString() : ''}</Text>
             <form onSubmit={submit}>
                 <HStack>
                     <FormControl>

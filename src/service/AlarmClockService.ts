@@ -13,7 +13,7 @@ export default class AlarmClockService {
     }
 
     public static async retrieveAlarmClockConfiguration(requestData: AlarmClockConfigurationRequestDTO) {
-        return GenericApiService.postWithDifferentResponse<AlarmClockConfigurationRequestDTO, AlarmClockConfigurationResposeDTO>(`${this.baseHandlerUrl}/configuration`, requestData);
+        return GenericApiService.postWithDifferentResponse<AlarmClockConfigurationRequestDTO, AlarmClockConfigurationResposeDTO>(`${this.baseHandlerUrl}/configurationWithNoAliveUpdate`, requestData);
     }
 
 
